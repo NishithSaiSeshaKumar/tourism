@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        head{
+            border: 50px #000000;
+            border-style: inset;
+            font-size: 50px;
+            font-family: "Times New Roman";
+           
+        }
+        body{
+            background-color: rgb(149, 187, 116);
+            font-size: 30px;
+            font-family: "Verdana";
+            border: 5px 5px 5px solid black;
+        }
+        input{
+            font-size: 20px;
+            padding: 10px;
+            border: 4px black;
+            background-color: rgb(195, 191, 191);
+        }
+    </style>
+<title>Calculator</title>
+<head>Calculator</head>
+
+<body><br><br>  
+        <input type="text" id="num1" placeholder="Enter the first number" required><br><br>
+        <input type="text" id="num2" placeholder="Enter the second number" required><br><br>
+        <input type="text" id="result" placeholder="Result"><br><br>
+        <input type="button" value="+" id="add" onclick="add()">
+        <input type="button" value="-" id="sub" onclick="sub()">
+        <input type="button" value="*" id="mul" onclick="mul()">
+        <input type="button" value="/" id="div" onclick="div()">
+        <input type="button" value="clear" id="clr" onclick="clr()">
+    <script>
+        function add(){
+            var x=document.getElementById("num1").value
+            var y=document.getElementById("num2").value
+            var z=parseInt(x)+parseInt(y)
+            document.getElementById("result").value=z
+        }
+        function sub(){
+            var x=document.getElementById("num1").value
+            var y=document.getElementById("num2").value
+            var z=parseInt(x)-parseInt(y)
+            document.getElementById("result").value=z
+        }
+        function mul(){
+            var x=document.getElementById("num1").value
+            var y=document.getElementById("num2").value
+            var z=parseInt(x)*parseInt(y)
+            document.getElementById("result").value=z
+        }
+        function div(){
+            var x=document.getElementById("num1").value
+            var y=document.getElementById("num2").value
+            var z=parseInt(x)/parseInt(y)
+            document.getElementById("result").value=z
+        }
+        function clr(){
+            document.getElementById("num1").value=""
+            document.getElementById("num2").value=""
+            document.getElementById("result").value=""
+        }
+    
+    </script>
+
+</body>
+</html>

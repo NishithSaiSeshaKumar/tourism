@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous"></script>
+  <style>
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .icon i {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="iconsContainer"></div>
+
+  <script>
+    // Display the icons and their names
+    const iconsContainer = document.getElementById('iconsContainer');
+
+    FontAwesomeKit.onReady(function () {
+      const library = FontAwesomeKit.library;
+
+      library.forEach(function (icon) {
+        const iconElement = document.createElement('div');
+        iconElement.classList.add('icon');
+        iconElement.innerHTML = `<i class="${icon.classes}"></i>${icon.name}`;
+        iconsContainer.appendChild(iconElement);
+      });
+    });
+  </script>
+</body>
+</html>
