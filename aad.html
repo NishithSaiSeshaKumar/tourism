@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPlay Audio</title>
+</head>
+<body>
+    <h1>Welcome to AutoPlay Audio</h1>
+    
+    <!-- Audio Element -->
+    <audio id="myAudio" controls autoplay>
+        <source src="http://amc-dev-x-e1b0c827f6d4.herokuapp.com/download/175042" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("myAudio").autoplay;
+        
+        }
+    </script>
+</body>
+</html>
+
+<!-- http://amc-dev-x-e1b0c827f6d4.herokuapp.com/download/175042 -->
